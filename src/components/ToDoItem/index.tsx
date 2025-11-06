@@ -1,7 +1,12 @@
 import "./todo-item.style.css";
 import { IconPencil, IconTrash } from "../icons";
+import { TodoItem } from "../../types/todo";
 
-export function ToDoItem({ item }) {
+interface TodoItemProps {
+  item: TodoItem;
+}
+
+export function ToDoItem({ item }: TodoItemProps) {
   const styles = ["todo-item"];
 
   if (item.completed) {
