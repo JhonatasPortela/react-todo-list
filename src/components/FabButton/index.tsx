@@ -1,10 +1,14 @@
 import "./fab-button.style.css";
-import { ReactNode } from "react"; // 👈 1. Importamos o tipo ReactNode
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface FabButtonProps {
+interface FabButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export function FabButton({ children }: FabButtonProps) {
-  return <button className="fab">{children}</button>;
+export function FabButton({ children, ...rest }: FabButtonProps) {
+  return (
+    <button className="fab" {...rest}>
+            {children} 
+    </button>
+  );
 }

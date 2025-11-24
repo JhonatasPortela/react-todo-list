@@ -62,7 +62,6 @@ function App() {
           </Heading>
         </Header>
         <ChecklistsWrapper>
-          <Dialog />
           <SubHeading>Para estudar</SubHeading>
           <ToDoList>
             {todos.map(function (t) {
@@ -76,7 +75,8 @@ function App() {
             })}
           </ToDoList>
           <Footer>
-            <FabButton>
+            <Dialog />
+            <FabButton onClick={() => alert("Adicionar novo item")}>
               <IconPlus />
             </FabButton>
           </Footer>

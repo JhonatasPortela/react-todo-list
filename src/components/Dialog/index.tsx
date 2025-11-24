@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./dialog.styles.css";
+import "./dialog.style.css";
 
 export function Dialog() {
   const dialogRef = useRef<HTMLDialogElement>(null);
