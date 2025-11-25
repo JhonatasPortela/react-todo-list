@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ChecklistsWrapper } from "./components/ChecklistsWrapper";
 import { Container } from "./components/Container";
 import { Dialog } from "./components/Dialog";
@@ -53,6 +54,12 @@ const completed: TodoItem[] = [
 ];
 
 function App() {
+  const [showDialog, setShowDialog] = useState(false);
+
+  function toogleDialog() {
+    setShowDialog(!showDialog);
+  }
+
   return (
     <main>
       <Container>
@@ -75,8 +82,8 @@ function App() {
             })}
           </ToDoList>
           <Footer>
-            <Dialog />
-            <FabButton onClick={() => alert("Adicionar novo item")}>
+            <Dialog isOpen={showDialog} onClose={toogleDialog} />
+            <FabButton onClick={toogleDialog}>
               <IconPlus />
             </FabButton>
           </Footer>
