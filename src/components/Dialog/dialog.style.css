@@ -9,3 +9,20 @@ dialog::backdrop {
   );
   opacity: 0.75;
 }
+
+.dialog {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.close-btn-wrapper {
+  text-align: right;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
